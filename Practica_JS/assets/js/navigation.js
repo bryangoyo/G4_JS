@@ -9,10 +9,13 @@ const headers = {
 // click listener
 document.addEventListener("keydown", function(event) {
     const key = event.key;
-    if (key >= "1" && key <= "5" && headers[key]) {
-        const headerElement = document.getElementById(headers[key]);
+    if ((key >= "1" && key <= "5") && headers[key]) {
+        const headerElement = document.getElementById(headers[3]);
+        console.log(headerElement);
         if (headerElement) {
             headerElement.scrollIntoView();
         }
+    }else{
+        console.log("No Existe este header");
     }
 });
