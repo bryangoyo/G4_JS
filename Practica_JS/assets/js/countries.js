@@ -11,7 +11,7 @@ async function getCountries() {
         query: `query getCountries {
           countries{
            name
-          capital
+           capital
           }
         }`
       })
@@ -25,21 +25,29 @@ async function getCountries() {
 
 let randomNumber;
 let randomcountry ;
-let hola= [];
+let hola = [];
 
+// FOR PARA HACER UN PUSH A UN ARRAY DE TRES PAISES CON SUS CAPITAL GENERADOS ALEATORIAMENTE
 for (let x = 0; x < 3; x++){
     let iiii = Math.floor(Math.random() * countries.data.countries.length);
-    let hhhh = countries.data.countries[iiii];
+    let hhhh = countries.data.countries[iiii]; // PAIS/CAPITAL ---- {NAME: HOLANDA, CAPITAL: HOLANDA}
     hola.push(hhhh);
 }
+    let valorArray = getRandomInt(3); // 0
+    
+    let choosenPais = hola[valorArray].name; //ESPAÑA
+    let choosenCapital = hola[valorArray].capital; //MADRID
 
-console.log(hola[getRandomInt(3)].name);
-console.log(hola[getRandomInt(3)].capital);
+  //Pais y Capital Respuesta Correcta
+    console.log(hola[valorArray].name);
+    console.log(hola[valorArray].capital);
 
-document.getElementById("eastereggQuestion").innerHTML = "What is the capital of "+ "<strong>" + hola[getRandomInt(3)].name + "</strong>";
+document.getElementById("eastereggQuestion").innerHTML = "What is the capital of "+ "<strong>" + choosenPais + "</strong>";
 
+// FOR PARA CREAR LOS INPUTS CON LAS CAPITALES DEL ARRAY
+  
 for (let x = 0; x < hola.length; x++){
-console.log(hola[x].name);
+    console.log(hola[x].name);
 
     let varvar = document.createElement("input");
     varvar.type = "radio";
@@ -51,25 +59,10 @@ console.log(hola[x].name);
     let container = document.getElementById('eastereggRespuestas');
     container.appendChild(varvar);
     container.appendChild(label);
-
 }
 console.log(hola);
-//console.log(randomcountry.name)
-//console.log(randomcountry.capital)
- 
 
-/* document.getElementById("eastereggQuestion").innerHTML = "What is the capital of "+ randomcountry.name;
+// TENGO EL PAIS Y LA CAPITAL SELECCINADA Y COMPRARLA CON LA SELECCION DEL INPUT SELECCIONADO  EVENTO
 
-        var radiobox = document.createElement('input');
-        radiobox.type = 'radio';
-        radiobox.id = 'contact';
-        radiobox.value = randomcountry.capital;
-
-        var label = document.createElement('label')
-        label.innerText = 'contact'; 
-
-        let container = document.getElementById('eastereggRespuestas');
-        container.appendChild(radiobox);
-        container.appendChild(label);*/
 }
 getCountries()
