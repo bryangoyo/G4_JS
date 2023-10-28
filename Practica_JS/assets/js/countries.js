@@ -19,7 +19,9 @@ async function getCountries() {
     let countries = await results.json();
     console.log(countries.data)
 
-
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }    
 
 let randomNumber;
 let randomcountry ;
@@ -29,20 +31,24 @@ for (let x = 0; x < 3; x++){
     let iiii = Math.floor(Math.random() * countries.data.countries.length);
     let hhhh = countries.data.countries[iiii];
     hola.push(hhhh);
-
 }
+
+console.log(hola[getRandomInt(3)].name);
+console.log(hola[getRandomInt(3)].capital);
+
+document.getElementById("eastereggQuestion").innerHTML = "What is the capital of "+ "<strong>" + hola[getRandomInt(3)].name + "</strong>";
 
 for (let x = 0; x < hola.length; x++){
 console.log(hola[x].name);
 
     let varvar = document.createElement("input");
     varvar.type = "radio";
-    varvar.value = hola[x].name;
+    varvar.value = hola[x].capital;
 
-    var label = document.createElement('label')
-    label.innerText = hola[x].name; 
+    let label = document.createElement('label')
+    label.innerText = hola[x].capital; 
 
-let container = document.getElementById('eastereggRespuestas');
+    let container = document.getElementById('eastereggRespuestas');
     container.appendChild(varvar);
     container.appendChild(label);
 
