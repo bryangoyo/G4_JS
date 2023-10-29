@@ -51,6 +51,7 @@ for (let x = 0; x < listaTresPaisesCapital.length; x++){
     inputEGGCapital.type = "radio";
     inputEGGCapital.value = listaTresPaisesCapital[x].capital;
     inputEGGCapital.name = "capital";
+    inputEGGCapital.innerText = listaTresPaisesCapital[x].capital;
 
     let labelEGGCapital = document.createElement('label')
     labelEGGCapital.innerText = (listaTresPaisesCapital[x].capital !== null) ? listaTresPaisesCapital[x].capital : 'No tiene';

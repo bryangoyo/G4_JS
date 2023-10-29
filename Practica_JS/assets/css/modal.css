@@ -6,15 +6,18 @@
     left: 0;
     top: 0;
     width: 100%; /* Ancho completo */
-    height: 100%; /* Algura completa */
+    height: 100%; /* Altura completa */
     overflow: auto; /* Se activará el scroll si es necesario */
     background-color: rgba(0,0,0,0.5); /* Color negro con opacidad del 50% */
   }
   
   /* Ventana o caja modal */
   .contenido-modal {
+    border: 5px solid rgba(255, 255, 255, 0.575);
+    background-color: #61458c60;
     position: relative; /* Relativo con respecto al contenedor -modal- */
-    background-color: white;
+    /*background-color: white;*/
+    color: white;
     margin: auto; /* Centrada */
     padding: 20px;
     width: 60%;
@@ -23,7 +26,17 @@
     animation-name: animarsuperior;
     animation-duration: 0.5s
   }
-  
+  .leftRadio {
+    display: flex;
+    flex-direction: column;   
+  }
+  #modalEasterEgg{
+    text-align: center;
+  }
+  #modalEasterEgg label{
+    display: block; 
+    cursor: pointer;
+  }
   /* Animación */
   @-webkit-keyframes animatetop {
     from {top:-300px; opacity:0} 
