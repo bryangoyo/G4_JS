@@ -54,7 +54,6 @@ for (let x = 0; x < listaTresPaisesCapital.length; x++){
 
     let labelEGGCapital = document.createElement('label')
     labelEGGCapital.innerText = (listaTresPaisesCapital[x].capital !== null) ? listaTresPaisesCapital[x].capital : 'No tiene';
-    //labelEGGCapital.innerText = listaTresPaisesCapital[x].capital; 
 
     let container = document.getElementById('eastereggRespuestas');
     container.appendChild(inputEGGCapital);
@@ -78,13 +77,19 @@ console.log(listaTresPaisesCapital);
               boton.style.display = (boton.style.display == 'none') ? 'block' : 'none';
           }
         });
-               
-         let booton = document.getElementById("abrirModal");
-         let easterIMG = document.getElementById("imagenEaster");
-         let modal = document.getElementById("ventanaModal");
-         
-         booton.addEventListener("click",function() {
-           modal.style.display = "block";
+//GENERAMOS UN VALOR ALEATOREO QUE SE COMPARA CON UN OBJETO AL QUE SE HA HECHO CLIC
+//SI ESE VALOR ES IGUAL AL ID DE LA IMAGEN ID=IMG+NUMERO se mostrara un modal easteregg       
+        let modal = document.getElementById("ventanaModal");
+        let randomIMGNumber = Math.floor(Math.random() * document.images.length);
+
+        document.querySelectorAll("img").forEach(imgHtml => {
+          imgHtml.addEventListener("click", e => {        
+            let id = e.target.getAttribute("id");
+            console.log("img"+randomIMGNumber);
+            if(id === ("img"+randomIMGNumber)){
+              id = modal.style.display = "block"; 
+            }                   
+          });        
         });
 }
 getCountries()
