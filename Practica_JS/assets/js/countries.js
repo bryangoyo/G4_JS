@@ -34,7 +34,7 @@ for (let x = 0; x < 3; x++){
     listaTresPaisesCapital.push(Pais_Capital);
 }
     let valorArray = getRandomInt(3);
-    
+    console.log(valorArray);
     let choosenPais = listaTresPaisesCapital[valorArray].name; //ESPAÑA
     let choosenCapital = listaTresPaisesCapital[valorArray].capital; //MADRID
 
@@ -78,12 +78,13 @@ console.log(listaTresPaisesCapital);
               boton.style.display = (boton.style.display == 'none') ? 'block' : 'none';
           }
         });
-        let booton = document.getElementById("abrirModal");
-        let easterIMG = document.getElementsByClassName("mov_img");
-        let modal = document.getElementById("ventanaModal");
-
-        booton.addEventListener("click",function() {
-          modal.style.display = "block";
+               
+         let booton = document.getElementById("abrirModal");
+         let easterIMG = document.getElementById("imagenEaster");
+         let modal = document.getElementById("ventanaModal");
+         
+         booton.addEventListener("click",function() {
+           modal.style.display = "block";
         });
 }
 getCountries()
