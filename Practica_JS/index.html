@@ -72,7 +72,7 @@
   <main>
 
 
-    <section>
+    <section id="whoWeAre" data-key="1">
       <div class="container content_container content_container_gray"> <!-- container seccion 2 who-we-are -->
 
         <div class="row">
@@ -89,7 +89,7 @@
           <div class="row"><!-- ROW 1 - seccion 2 who-we-are -->
             <div class="col-xs-12 col-md-12 col-lg-6">
               <h3>Lorem ipsum</h3>
-              <img class="img1" src="./img/1.jpg" alt="imagen 1">
+              <img class="img1" src="assets/img/1.jpg" alt="imagen 1">
               <p id="parrafo1">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, exercitationem. Tempore, similique
                 neque.
@@ -114,7 +114,7 @@
               <h3>Lorem ipsum</h3>
 
               <div class="adv2">
-                <img src="img/ad.jpg" alt="anuncio amazon">
+                <img src="assets/img/ad.jpg" alt="anuncio amazon">
               </div>
 
               <p>
@@ -144,7 +144,7 @@
 
 
 
-    <section class="section-our-services">
+    <section id="ourServices" class="section-our-services" data-key="2">
       <div class="container content_container">
         <div class="row">
           <h2 id="our-services">Our services</h2>
@@ -249,7 +249,7 @@
     </section>
 
 
-    <section id="portfolio">
+    <section id="portfolio" data-key="3">
       <div class="container"> <!--class=container hecho para bootstrap-->
         <div class="content_container content_container_gray">
           <h2>Portfolio</h2>
@@ -295,7 +295,7 @@
     </section>
 
     <!--Start of map section-->
-    <section>
+    <section id="map" data-key="4">
       <div class="container content_container">
         <div class="row content_container">
           <div id="map_row1_col1" class="col-md-8 offset-md-2">
@@ -332,7 +332,7 @@
     </section>
 
     <!--End of of map section-->
-    <section id="contact">
+    <section id="contact" data-key="5">
       <div class="container">
         <div id="row_contact1" class="row">
           <div id="contact_row1_col1" class="col-12">
@@ -391,10 +391,10 @@
       </div>
     </section>
 <!-- /////////////////////////////////////////////////////// -->
-    <section id="easteregg" class="fadeup">
+    <section id="easteregg" class="fadeup" data-key="6">
       <form id="contact_form" action="javascript:void(0);" autocomplete="on">
       </fieldset>
-        <Legend>Quiz</Legend>
+        <h2>Quiz</h2>
         <span id="eastereggQuestion"></span>
          <!-- AQUI SE IMPRIME LA PREGUNTA DEL AESTEREGG  -->
         <br>
@@ -414,7 +414,7 @@
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/65f6d58862.js" crossorigin="anonymous"></script>
-  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/navigation.js" type="module" async></script>
   <script src="assets/js/countries.js"></script>
   <script src="assets/js/meteo.js"></script>
 </body>
