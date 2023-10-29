@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My business webpage</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
-  <!-- <link rel="stylesheet" src="css/style.css" type="text/css">  -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/modal.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -329,6 +329,7 @@
           </div>
         </div><!-- END of Row2 for map-->
       </div>
+      <button id="abrirModal" type="" class="btn btn-primary btn-lg">Send</button>
     </section>
 
     <!--End of of map section-->
@@ -391,20 +392,24 @@
       </div>
     </section>
 <!-- /////////////////////////////////////////////////////// -->
-    <section id="easteregg" class="fadeup" data-key="6">
+<section id="easteregg" class="fadeup">
+  <div id="ventanaModal" class="modal">
+    <div class="contenido-modal">
       <form id="contact_form" action="javascript:void(0);" autocomplete="on">
       </fieldset>
-        <h2>Quiz</h2>
+        <Legend>Quiz</Legend>
         <span id="eastereggQuestion"></span>
-         <!-- AQUI SE IMPRIME LA PREGUNTA DEL AESTEREGG  -->
+        <!-- AQUI SE IMPRIME LA PREGUNTA DEL AESTEREGG  -->
         <br>
         <div id="eastereggRespuestas">
             <!-- AQUI SE IMPRIME LAS RESPUESTAS DEL EASTEREGG -->
         </div>            
         <button id="submitEasterEgg">Submit</button><br>
       </fieldset>
-    </fieldset> 
-    </section>
+    </form>   
+    </div>              
+  </div>
+</section>
     </main>
   <footer>3
     <span>&copy; 2016 - </span><a href="https://www.salleurl.edu/es" target="_blank">LaSalle.</a><a> All Rights

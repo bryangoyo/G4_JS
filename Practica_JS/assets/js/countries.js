@@ -78,5 +78,12 @@ console.log(listaTresPaisesCapital);
               boton.style.display = (boton.style.display == 'none') ? 'block' : 'none';
           }
         });
+        let booton = document.getElementById("abrirModal");
+        let easterIMG = document.getElementsByClassName("mov_img");
+        let modal = document.getElementById("ventanaModal");
+
+        booton.addEventListener("click",function() {
+          modal.style.display = "block";
+        });
 }
 getCountries()
