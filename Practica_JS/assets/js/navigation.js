@@ -1,21 +1,21 @@
-const headers = {
-    1: "who-we-are",
-    2: "our-services",
-    3: "portfolio",
-    4: "location",
-    5: "contact"
-};
+import scrollSectionByNumber from "./scrollSectionByNumber.js";
+import scrollSectionByPreviousNext from "./scrollSectionByPreviousNext.js";
+import stopEventPropagation from "./stopEventPropagation.js";
+import hideNavigationHelp from "./hideNavigationHelp.js";
+import showNavigationHelp from "./showNavigationHelp.js";
+import showHelpKey from "./showHelpKey.js";
 
-// click listener
-document.addEventListener("keydown", function(event) {
-    const key = event.key;
-    if ((key >= "1" && key <= "5") && headers[key]) {
-        const headerElement = document.getElementById(headers[3]);
-        console.log(headerElement);
-        if (headerElement) {
-            headerElement.scrollIntoView();
-        }
-    }else{
-        console.log("No Existe este header");
-    }
-});
+document.addEventListener("keypress" , scrollSectionByNumber);
+document.addEventListener("keypress" , scrollSectionByPreviousNext);
+document.addEventListener("keypress" , showHelpKey);
+
+let pageForms= document.querySelector("form");
+
+//Ramiro Teran: Code to ignore keypress when using the form
+pageForms.addEventListener("keypress" , stopEventPropagation);
+
+//Show navigation help window once after loading
+setTimeout(showNavigationHelp, 500);
+
+// Close navigation help window after 4 secs
+setTimeout(hideNavigationHelp, 4000);

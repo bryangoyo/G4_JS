@@ -584,6 +584,41 @@ footer {
     }
 }
 
+/*Navigation modal*/
+.modal {
+    display: block;
+}
+
+.modal-title{
+    font-size: xx-large;
+    margin-top: 10px;
+   
+}
+
+.modal-content {
+    background: #EFEFEF;
+}
+
+.list-group{
+    border-radius: 1px solid;
+}
+
+.list-group-item {
+    border: 5px solid rgba(255, 255, 255, 0.575);
+    background-color: #61458c60;
+    padding: 5px;
+    font-size:large;
+    margin: 0%;
+}
+ 
+kbd {
+    background-color: white;
+    color: black;
+    font-size:x-large;
+    text-align: center;
+    margin-right: 5px;
+}
+
 /* Esto sirve solo para debugar*/
 /*
 .row{
