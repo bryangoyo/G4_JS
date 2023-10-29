@@ -17,14 +17,12 @@ async function getCountries() {
       })
     })
     let countries = await results.json();
-    console.log(countries.data)
+    //console.log(countries.data)
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-let randomNumber;
-let randomcountry ;
 let listaTresPaisesCapital = [];
 
 // FOR PARA HACER UN PUSH A UN ARRAY DE TRES PAISES CON SUS CAPITAL GENERADOS ALEATORIAMENTE
@@ -34,24 +32,19 @@ for (let x = 0; x < 3; x++){
     listaTresPaisesCapital.push(Pais_Capital);
 }
     let valorArray = getRandomInt(3);
-    console.log(valorArray);
     let choosenPais = listaTresPaisesCapital[valorArray].name; //ESPAÑA
     let choosenCapital = listaTresPaisesCapital[valorArray].capital; //MADRID
-
-  //Pais y Capital Respuesta Correcta
-    console.log(listaTresPaisesCapital[valorArray].name);
-    console.log(listaTresPaisesCapital[valorArray].capital);
 
 document.getElementById("eastereggQuestion").innerHTML = "What is the capital of "+ "<strong>" + choosenPais + "</strong>";
 // FOR PARA CREAR LOS INPUTS CON LAS CAPITALES DEL ARRAY  
 for (let x = 0; x < listaTresPaisesCapital.length; x++){
-    console.log(listaTresPaisesCapital[x].name);
+    //console.log(listaTresPaisesCapital[x].name);
 
     let inputEGGCapital = document.createElement("input");
     inputEGGCapital.type = "radio";
     inputEGGCapital.value = listaTresPaisesCapital[x].capital;
     inputEGGCapital.name = "capital";
-    inputEGGCapital.innerText = listaTresPaisesCapital[x].capital;
+    //inputEGGCapital.innerText = listaTresPaisesCapital[x].capital;
 
     let labelEGGCapital = document.createElement('label')
     labelEGGCapital.innerText = (listaTresPaisesCapital[x].capital !== null) ? listaTresPaisesCapital[x].capital : 'No tiene';
@@ -72,7 +65,7 @@ console.log(listaTresPaisesCapital);
                 break;
             }
           }
-              console.log(selectedCapital);
+              //console.log(selectedCapital);
           if (choosenCapital == selectedCapital) {
               let boton = document.getElementById("easteregg");
               boton.style.display = (boton.style.display == 'none') ? 'block' : 'none';
@@ -86,7 +79,7 @@ console.log(listaTresPaisesCapital);
         document.querySelectorAll("img").forEach(imgHtml => {
           imgHtml.addEventListener("click", e => {        
             let id = e.target.getAttribute("id");
-            console.log("img"+randomIMGNumber);
+            //console.log("img"+randomIMGNumber);
             if(id === ("img"+randomIMGNumber)){
               id = modal.style.display = "block"; 
             }                   
