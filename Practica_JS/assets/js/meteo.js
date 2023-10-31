@@ -9,7 +9,6 @@ if (navigator.geolocation) {
       fetch(url)
         .then(response => response.json())
         .then(data => {
-            const weatherDescription = data.weather[0].description;
             const temperature = data.main.temp;
             const humidity = data.main.humidity;
             const description = data.weather[0].description;
